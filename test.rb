@@ -213,5 +213,10 @@ describe "p34" do
 		expect(p34(10)).to eq(4)
 	end
 end
-				
+
+describe "p35" do
+	it "returns the prime factors of a given positive integer" do
+		expect(p35(315)).to eq([3, 3, 5, 7])
+	end
+end	
 	

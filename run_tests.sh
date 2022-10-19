@@ -1,0 +1,1 @@
+clear && rspec test.rb
