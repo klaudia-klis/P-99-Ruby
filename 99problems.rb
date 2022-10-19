@@ -267,11 +267,12 @@ def p28(arr)
 	arr.sort_by {|x| x.length}
 end
 
-
+# P31 Determine whether a given integer number is prime.
 def p31(x)
 	x.prime?
 end
 
+# P32 Determine the greatest common divisor of two positive integer numbers.
 def p32(a, b)
 	if a % b == 0
 		b
@@ -280,10 +281,12 @@ def p32(a, b)
 	end
 end
 
+# P33 Determine whether two positive integer numbers are coprime.
 def p33(a, b)
 	p32(a, b) == 1
 end
 
+# P34 Calculate Euler's totient function phi(m).
 def p34(x)
 	range = []
 		for i in 1..(x - 1)
@@ -302,6 +305,7 @@ def p34(x)
 		end
 end
 
+# P35 Determine the prime factors of a given positive integer.
 def p35(x)
 	if x == 1
 		return []
@@ -319,4 +323,27 @@ def p35(x)
 		end
 end
 
-def p36
+# P36 Determine the prime factors of a given positive integer (2).
+def p36(x)
+arr = []
+prime_factors = p35(x)
+	for i in 0..(prime_factors.length - 1)
+		if not arr.last.respond_to? :each
+			arr << [prime_factors[i]]
+		elsif arr.last.last == prime_factors[i]
+			arr.last << prime_factors[i]
+		else 
+			arr << [prime_factors[i]]
+		end
+	end
+	result = []
+	for i in 0..(arr.length - 1)
+		if arr[i].length != 1
+			result << [arr[i].length, arr[i].last]
+		else
+			result << [1, arr[i].last]
+		end
+	end
+	result
+end
+

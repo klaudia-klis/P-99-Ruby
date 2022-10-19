@@ -219,4 +219,9 @@ describe "p35" do
 		expect(p35(315)).to eq([3, 3, 5, 7])
 	end
 end	
-	
+
+describe "p36" do
+	it "returns the prime factors of a fiven positive integer (counted)" do
+		expect(p36(315)).to eq([[2, 3], [1, 5], [1, 7]])
+	end
+end
