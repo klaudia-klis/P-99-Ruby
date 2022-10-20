@@ -231,3 +231,9 @@ describe "p37" do
 		expect(p37(315)).to eq(144)
 	end
 end
+
+describe "p39" do
+	it "returns an array of prime numbers" do
+		expect(p39(4, 6)).to eq([5])
+	end
+end

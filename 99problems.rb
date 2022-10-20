@@ -361,4 +361,19 @@ i = 0
 	end
 	arr.inject(:*)
 end
+
+# P39 A list of prime numbers.
+def p39(x, y)
+	arr = []
+	for i in x..y
+		arr << i
+	end
 	
+	result = []
+	for i in 1.. (arr.length - 2)
+		if arr[i].prime? == true
+			result << arr[i]
+		end
+	end
+	result
+end
