@@ -222,6 +222,12 @@ end
 
 describe "p36" do
 	it "returns the prime factors of a fiven positive integer (counted)" do
-		expect(p36(315)).to eq([[2, 3], [1, 5], [1, 7]])
+		expect(p36(315)).to eq([[3, 2], [5, 1], [7, 1]])
+	end
+end
+
+describe "p37" do
+	it "counts the positive integeres up to a given integer N that are relatively prime to N(improved)" do
+		expect(p37(315)).to eq(144)
 	end
 end

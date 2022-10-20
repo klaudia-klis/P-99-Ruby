@@ -339,11 +339,26 @@ prime_factors = p35(x)
 	result = []
 	for i in 0..(arr.length - 1)
 		if arr[i].length != 1
-			result << [arr[i].length, arr[i].last]
+			result << [arr[i].last, arr[i].length]
 		else
-			result << [1, arr[i].last]
+			result << [arr[i].last, 1]
 		end
 	end
 	result
 end
 
+# P37 (**) Calculate Euler's totient function phi(m) (improved).
+def p37(x)
+prime_factors = p36(x)
+
+arr = []
+i = 0
+	while i < prime_factors.length do
+		a = ((prime_factors[i].first - 1)*((prime_factors[i].first))**(prime_factors[i].last - 1))
+		arr << a
+		
+		i += 1
+	end
+	arr.inject(:*)
+end
+	
