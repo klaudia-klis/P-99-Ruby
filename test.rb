@@ -237,3 +237,11 @@ describe "p39" do
 		expect(p39(4, 6)).to eq([5])
 	end
 end
+
+describe "p40" do
+	it "returns two prime numbers that sum up to a given even integer" do
+		expect(p40(28)).to eq([5, 23])
+	end
+end
+
+

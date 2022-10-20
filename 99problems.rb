@@ -377,3 +377,18 @@ def p39(x, y)
 	end
 	result
 end
+
+# P40 Goldbach's conjecture.
+def p40(x)
+	arr = []
+	for i in 2..x
+		arr << i
+	end
+	prime_elements = []
+	for i in 0..(arr.length - 1)
+		if arr[i].prime? == true
+			prime_elements << arr[i]
+		end
+	end
+	prime_elements.combination(2).detect { |a, b| a + b == x }
+end
