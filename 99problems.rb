@@ -380,6 +380,18 @@ end
 
 # P40 Goldbach's conjecture.
 def p40(x)
+	if x == 2
+		return [1, 1]
+	end
+	if x == 3
+		return [1, 2]
+	end
+	if x == 4
+		return [2, 2]
+	end
+	if x == 6
+		return [3, 3]
+	end
 	arr = []
 	for i in 2..x
 		arr << i
@@ -412,3 +424,26 @@ def p41(x, y)
 	end
 	result
 end
+
+# P41 A list of Goldbach compositions (primes bigger than 50).
+def p41a(x, y)
+	arr = []
+	for i in x..y
+		if i % 2 == 0
+			arr << i
+		end
+	end
+	prime_elements = []
+	for i in 0..(arr.length - 1)
+		a = p40(arr[i])
+		prime_elements << a 
+	end
+	result = []
+	for i in 0..(prime_elements.length - 1)
+		if prime_elements[i].first > 50 && prime_elements[i].last > 50
+				result << [arr[i], prime_elements[i]]
+		end
+	end
+	result
+end
+	

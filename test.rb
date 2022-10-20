@@ -250,3 +250,8 @@ describe "p41" do
 	end
 end
 
+describe "p41a" do
+	it "returns a list of all even numbers and their Goldbach composition when ther's given a range of integers by its lower and upper limit (if both primes are bigger than 50" do
+		expect(p41a(1, 2000)).to eq([[992, [73, 919]], [1382, [61,1321]], [1856, [67, 1789]], [1928, [61, 1867]]])
+	end
+end
