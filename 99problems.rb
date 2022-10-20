@@ -392,3 +392,23 @@ def p40(x)
 	end
 	prime_elements.combination(2).detect { |a, b| a + b == x }
 end
+
+# P41 A list of Goldbach compositions.
+def p41(x, y)
+	arr = []
+	for i in x..y
+		if i % 2 == 0
+			arr << i
+		end
+	end
+	prime_elements = []
+	for i in 0..(arr.length - 1)
+		a = p40(arr[i])
+		prime_elements << a
+	end
+	result = []
+	for i in 0..(prime_elements.length - 1)
+		result << [arr[i], prime_elements[i]]
+	end
+	result
+end

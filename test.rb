@@ -234,7 +234,7 @@ end
 
 describe "p39" do
 	it "returns an array of prime numbers" do
-		expect(p39(4, 6)).to eq([5])
+		expect(p39(3, 7)).to eq([5])
 	end
 end
 
@@ -244,4 +244,9 @@ describe "p40" do
 	end
 end
 
+describe "p41" do
+	it "returns a list of all even numbers and their Goldbach composition when ther's given a range of integers by its lower and upper limit" do
+		expect(p41(9, 13)).to eq([[10, [3, 7]], [12, [5,7]]])
+	end
+end
 
